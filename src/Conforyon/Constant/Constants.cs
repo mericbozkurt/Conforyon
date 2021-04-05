@@ -24,6 +24,11 @@
         /// <summary>
         /// 
         /// </summary>
+        public const string CultureName = "tr-TR";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const int VariableLength = 15;
 
         /// <summary>

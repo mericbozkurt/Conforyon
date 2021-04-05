@@ -1,17 +1,22 @@
-﻿using System;
+﻿using Conforyon.Culture;
+using System;
 using System.Windows.Forms;
 
 namespace Conforyon.UI
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Uygulamanın ana girdi noktası.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
+            Cultures.SetAllCulture();
             Application.EnableVisualStyles();
+#if NETCOREAPP3_1 || NET5_0 || NET6_0
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+#endif
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
         }

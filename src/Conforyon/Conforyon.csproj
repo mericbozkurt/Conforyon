@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <!--<TargetFrameworks>net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48;netstandard2.0;netstandard2.1;netcoreapp2.1;netcoreapp3.1;net5.0</TargetFrameworks>-->
+    <!--<TargetFramework>net48</TargetFramework>-->
+    <TargetFrameworks>net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48;netstandard2.0;netstandard2.1;netcoreapp2.1;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
     <ApplicationIcon>Resources\ICO.ico</ApplicationIcon>
-    <Version>1.4.7.7</Version>
+    <Version>1.4.7.8</Version>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Title>Conforyon</Title>
@@ -13,13 +13,13 @@
     <Copyright>Copyright © $([System.DateTime]::Today.ToString(yyyy)) $(Authors)</Copyright>
     <Summary>Best with fast and convenient unit conversions.</Summary>
     <Description>$(Summary)
-C# Insanely Fast Unit Converter - $(PackageId)</Description>
+.NET Insanely Fast Unit Converter - $(PackageId)</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Minor changes have been made.
 Changes are detailed at https://github.com/Taiizor/Conforyon/releases</PackageReleaseNotes>
-    <PackageTags>Conforyon Taiizor Soferity C# CSharp DotNet Fast Convenient Unit Convert Converts Converter Converters Converting Convertion</PackageTags>
+    <PackageTags>Conforyon Taiizor Soferity C# CSharp VBC VB VisualBasic DotNET .NET NET Fast Convenient Unit Convert Converts Converter Converters Converting Convertion</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <!--<DocumentationFile>..\$(PackageId)\bin$(OutputPath)\$(Configuration)\$(TargetFramework)\$(PackageId).xml</DocumentationFile>-->
     <PackageProjectUrl>https://github.com/Taiizor/Conforyon</PackageProjectUrl>
@@ -30,8 +30,8 @@ Changes are detailed at https://github.com/Taiizor/Conforyon/releases</PackageRe
     <PackageIcon>CUBE.png</PackageIcon>
     <Company>$(Authors)</Company>
     <Owners>$(Authors)</Owners>
-    <AnalysisLevel>latest</AnalysisLevel>
-    <LangVersion>latest</LangVersion>
+    <AnalysisLevel>preview</AnalysisLevel>
+    <LangVersion>preview</LangVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <FileVersion>$(Version)</FileVersion>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -62,7 +62,7 @@ Changes are detailed at https://github.com/Taiizor/Conforyon/releases</PackageRe
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('netstandard')) OR '$(TargetFramework)' == 'netcoreapp2.1'">
     <PackageReference Include="System.Drawing.Common">
-      <Version>5.0.1</Version>
+      <Version>6.0.0-preview.2.21154.6</Version>
     </PackageReference>
   </ItemGroup>
 
